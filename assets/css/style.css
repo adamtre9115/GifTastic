@@ -1,0 +1,12 @@
+.searchB {
+    margin: 0 5px;
+    border: 1px solid transparent;
+    padding: .5rem .75rem;
+    border-radius: 0.25rem; 
+    color: #fff;
+}
+
+.btn-primary,
+.searchB {
+    background-color: #000;
+}
