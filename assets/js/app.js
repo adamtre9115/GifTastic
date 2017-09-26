@@ -14,7 +14,7 @@ $(document).ready(function(){
             $("#buttons").append($newButton);
         }
     }
-    buttonDisplay();
+    
     
     // append new button on submit button click
     function addCat(){
@@ -33,7 +33,7 @@ $(document).ready(function(){
             }
         })
     }
-    addCat()
+    // addCat()
     
     
     // Clear input field
@@ -57,18 +57,12 @@ $(document).ready(function(){
             })
     
     
-    
-    
-    
-    
-    
-    
-    
             e.preventDefault();
         })
     }
-    imgRequest();
+    // imgRequest();
     
+    buttonDisplay();
 
 
 })
