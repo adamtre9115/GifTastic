@@ -20,20 +20,14 @@ $(document).ready(function(){
     function addCat(){
         $("#newCat").on("click",function(){
             var newCategory = $("#newGif").val();
-            if(newCategory !== ""){
-                   var $newButton = $("<button></button>");
-                   $($newButton).attr("class", "searchB");
-                   $($newButton).html(newCategory);
-                   $("#buttons").append($newButton);
-                   clearField();
-                   event.preventDefault();
-            } else {
-                console.log("empty");
-                event.preventDefault();
-            }
+            $("#buttons").empty();
+            gifs.push(newCategory)
+            clearField();
+            buttonDisplay();
+            event.preventDefault();
         })
     }
-    // addCat()
+    addCat()
     
     
     // Clear input field
