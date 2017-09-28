@@ -48,9 +48,12 @@ $(document).ready(function(){
                 method: "GET"
             }).done(function(response){
                 console.log(response.data[0]);
+                var results = response.data
 
-                for (var i = 0; i < response.data.length; i++){
-                    console.log(response.data[i].images.url);
+                for (var i = 0; i < results.length; i++){
+                    var newDiv = $("<div class='gifAdded'></div>");
+                    var divImg = $("img");
+                    divImg.attr("src", response.images[i]);
                 }
             })
     
