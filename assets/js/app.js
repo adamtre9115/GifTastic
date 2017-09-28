@@ -48,13 +48,14 @@ $(document).ready(function(){
                 method: "GET"
             }).done(function(response){
                 console.log(response);
+                }
             })
     
     
             e.preventDefault();
         })
     }
-    // imgRequest();
+    imgRequest();
     
     buttonDisplay();
 
