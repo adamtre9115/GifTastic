@@ -48,7 +48,6 @@ $(document).ready(function(){
                 method: "GET"
             }).done(function(response){
                 console.log(response);
-                }
             })
     
     
