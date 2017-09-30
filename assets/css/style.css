@@ -1,3 +1,12 @@
+body {
+    background-color: #5b7d87;
+}
+
+h1,
+label {
+    color: silver;
+}
+
 .searchB {
     margin: 5px;
     padding: .5rem .75rem;
@@ -7,7 +16,7 @@
 
 .btn-primary,
 .searchB {
-    background-color: #000;
+    background-color: #45415e;
     border: 1px solid transparent;
 }
 
@@ -17,5 +26,7 @@ button:hover {
 }
 
 .gifAdded {
-    margin: 10px 5px;
+    margin-top: 10px;
+    height: auto;
+    max-height: 200px;
 }
