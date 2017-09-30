@@ -1,5 +1,5 @@
 body {
-    background-color: #5b7d87;
+    background: url("../images/cityWallpaper.jpg");
 }
 
 h1,
@@ -14,19 +14,27 @@ label {
     color: #fff;
 }
 
+.btn,
 .btn-primary,
 .searchB {
-    background-color: #45415e;
+    border: none;
+    /* background-color: #45415e; */
     border: 1px solid transparent;
+    background: #42275a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 
 .btn-primary:hover,
 button:hover {
     background-color: silver;
+    border: none;
 }
 
 .gifAdded {
-    margin-top: 10px;
-    height: auto;
-    max-height: 200px;
+    margin: 10px;
+    height: 250px;
+    width: 250px;
+    padding: 2px;
 }

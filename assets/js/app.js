@@ -54,9 +54,10 @@ $(document).ready(function () {
                 for (var i = 0; i < results.length; i++) {
                     // var newDiv = $("<div class='gifAdded'></div>");
                     var divImg = $("<img>");
-                    divImg.attr("src", results[i].images.fixed_height.url);
-                    divImg.attr("class", "img-fluid col-md-4 gifAdded");
-                    divImg.attr("data-state", "still");
+                    divImg.attr("src", results[i].images.fixed_height_still.url);
+                    divImg.attr("class", "img-fluid col-md-4 gifAdded img-thumbnail");
+                    divImg.attr("data-still", results[i].images.fixed_height_still.url);
+                    divImg.attr("data-animate", results[i].images.fixed_height.url);
                     // $(newDiv).append(divImg);
                     $("#display").append(divImg);
 
@@ -67,14 +68,29 @@ $(document).ready(function () {
         })
     }
 
+    function imageSwap(){
+        $("#display").on("click", "img", function(){
+            // console.log($(this).attr("src"));
+           var still = $(this).attr("data-still");
+           var animate = $(this).attr("data-animate");
+           if ( $(this).attr("src") === still){
+               $(this).attr("src", animate)
+           } else {
+               $(this).attr("src", still);
+           }
+        })
+    }
+  
 
     
     function loadImages() {
         addCat();
         buttonDisplay();
         imgRequest();
+        imageSwap();
+       
     }
-
+    
 
     loadImages();
 
