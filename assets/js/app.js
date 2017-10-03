@@ -2,15 +2,19 @@
 
 $(document).ready(function () {
 
-    var gifs = ["hello", "swerve", "lit", "savage", "oh snap", "lol"];
+    var gifs = ["bruh", "swerve", "lit", "savage", "preach", "lol", "shade"];
 
 
 
     function buttonDisplay() {
         for (var i = 0; i < gifs.length; i++) {
+            // create buttons
             var $newButton = $("<button></button>");
+            // assign buttons these classes
             $($newButton).attr("class", "searchB");
+            // make the button text say the text of the array index
             $($newButton).html(gifs[i]);
+            // append the buttons to the buttons div
             $("#buttons").append($newButton);
         }
     }
@@ -20,10 +24,15 @@ $(document).ready(function () {
     function addCat() {
         $("#newCat").on("click", function () {
             var newCategory = $("#newGif").val();
+            // clear buttons div
             $("#buttons").empty();
-            gifs.push(newCategory)
+            // push buttons into gifs array
+            gifs.push(newCategory);
+            // clear input area of entered text
             clearField();
+            // re display buttons to page
             buttonDisplay();
+            // prevent automatic refresh on submit
             event.preventDefault();
         })
     }
@@ -32,6 +41,7 @@ $(document).ready(function () {
 
     // Clear input field
     function clearField() {
+        // clear input area of entered text
         $("#newGif").val("");
     }
 
@@ -52,13 +62,15 @@ $(document).ready(function () {
                 var results = response.data
 
                 for (var i = 0; i < results.length; i++) {
-                    // var newDiv = $("<div class='gifAdded'></div>");
+                    // assign all images to divImg
                     var divImg = $("<img>");
+                    // on render images will come in still
                     divImg.attr("src", results[i].images.fixed_height_still.url);
+                    // with these classes
                     divImg.attr("class", "img-fluid col-md-4 gifAdded img-thumbnail");
                     divImg.attr("data-still", results[i].images.fixed_height_still.url);
                     divImg.attr("data-animate", results[i].images.fixed_height.url);
-                    // $(newDiv).append(divImg);
+                    // append all rendered images to this div
                     $("#display").append(divImg);
 
                 }
@@ -73,9 +85,12 @@ $(document).ready(function () {
             // console.log($(this).attr("src"));
            var still = $(this).attr("data-still");
            var animate = $(this).attr("data-animate");
+        //    if image is equal to data-still
            if ( $(this).attr("src") === still){
+            //   replace the image with the animated gif
                $(this).attr("src", animate)
            } else {
+            //    or leave it as still if it is animated
                $(this).attr("src", still);
            }
         })

@@ -1,10 +1,15 @@
 body {
     background: url("../images/cityWallpaper.jpg");
+    font-family: 'Mukta', sans-serif;
+    
 }
 
+h1 {
+    font-size: 48px;
+}
 h1,
 label {
-    color: silver;
+    color: #734b6d;
 }
 
 .searchB {
