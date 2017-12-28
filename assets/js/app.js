@@ -22,7 +22,7 @@ $(document).ready(function () {
 
     // append new button on submit button click
     function addCat() {
-        $("#newCat").on("click", function () {
+        $("#newCat").on("click", function (e) {
             var newCategory = $("#newGif").val();
             // clear buttons div
             $("#buttons").empty();
@@ -33,7 +33,7 @@ $(document).ready(function () {
             // re display buttons to page
             buttonDisplay();
             // prevent automatic refresh on submit
-            event.preventDefault();
+            e.preventDefault();
         })
     }
 
