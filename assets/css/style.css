@@ -24,7 +24,6 @@ label {
 .btn-primary,
 .searchB {
     border: none;
-    /* background-color: #45415e; */
     border: 1px solid transparent;
     background: #42275a;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
