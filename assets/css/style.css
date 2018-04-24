@@ -1,5 +1,6 @@
 body {
     background: url("../images/cityWallpaper.jpg");
+    background-repeat: no-repeat;
     font-family: 'Mukta', sans-serif;
     
 }
